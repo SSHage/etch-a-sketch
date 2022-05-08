@@ -17,10 +17,10 @@ let clearGrid = () => {
 
 // function to create grid
 
-slider.addEventListener("click", gridSizer);
+slider.addEventListener("input", gridSizer);
 
 function gridSizer(e) {
-    clearGrid;
+    clearGrid();
     let i,j;
     var rows = slider.value;
     width = 100/rows;
@@ -35,21 +35,19 @@ function gridSizer(e) {
         }
 }
 // function to colour gridboxes red after cursor moves over
-let colourGrid = () => {
-    const gridboxes = document.querySelectorAll(".gridbox");
-    /* gridboxes.forEach(gridbox => 
-        gridbox.addEventListener("mouseover", () =>
-            gridbox.classList.add("red")
-                )
-            ); */
+const gridboxes = document.querySelectorAll(".gridbox");
+/* gridboxes.forEach(gridbox => 
+    gridbox.addEventListener("mouseover", () =>
+        gridbox.classList.add("red")
+            )
+        ); */
         
-    // alternative function
-    for (const gridbox of gridboxes) {
-        let opacityval = 0;
-        gridbox.addEventListener("mouseover", function(e){
-            this.classList.add("red");
-            opacityval += 0.2;
-            this.style.opacity = opacityval;
-        })
-    } 
-}
+// alternative function
+for (const gridbox of gridboxes) {
+    let opacityval = 0;
+    gridbox.addEventListener("mouseover", function(e){
+        this.classList.add("red");
+        opacityval += 0.2;
+        this.style.opacity = opacityval;
+    })
+} 
