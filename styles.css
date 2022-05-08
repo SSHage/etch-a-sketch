@@ -6,34 +6,33 @@
     text-shadow: 2px;
 }
 
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .gridcontainer {
     width: 60vw; 
-    height: 60vw; 
+    height: auto;
     max-width: 100%;
     text-align: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border:solid black;
 }
 
 .gridbox {
-    border: 0.01px solid black;
+    border: 0.01px solid black; 
+    max-width: 100%;
     position: relative;
     height: 0;
     box-sizing: border-box;
 }
 
-.red {
-    background-color: #04AA6D;
-}
-
-.inputcontainer {
-    display: flex;
-    justify-content: center;
-}
-
-.inputbutton {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.orange {
+    background-color: orange;
 }
 
 /* slide properties */
@@ -77,4 +76,11 @@
   height: 25px; /* Slider handle height */
   background: #04AA6D; /* Green background */
   cursor: pointer; /* Cursor on hover */
+}
+
+.value {
+    display: flex;
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: 25px;
 }

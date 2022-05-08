@@ -16,9 +16,8 @@ let clearGrid = () => {
 }
 
 // function to create grid
-
+gridSizer(); // runs function once at the start
 slider.addEventListener("input", gridSizer);
-
 function gridSizer(e) {
     clearGrid();
     let i,j;
@@ -33,21 +32,13 @@ function gridSizer(e) {
             gridcontainer.appendChild(gridboxes);
             }
         }
+    gridboxes = document.querySelectorAll(".gridbox"); //select all new initiated gridboxes
+    for (const gridbox of gridboxes) {
+        let opacityval = 0;
+        gridbox.addEventListener("mouseover", function(e){
+            this.classList.add("orange");
+            opacityval += 0.2;
+            this.style.opacity = opacityval;
+        })
+    } 
 }
-// function to colour gridboxes red after cursor moves over
-const gridboxes = document.querySelectorAll(".gridbox");
-/* gridboxes.forEach(gridbox => 
-    gridbox.addEventListener("mouseover", () =>
-        gridbox.classList.add("red")
-            )
-        ); */
-        
-// alternative function
-for (const gridbox of gridboxes) {
-    let opacityval = 0;
-    gridbox.addEventListener("mouseover", function(e){
-        this.classList.add("red");
-        opacityval += 0.2;
-        this.style.opacity = opacityval;
-    })
-} 
