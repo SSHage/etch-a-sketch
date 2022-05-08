@@ -29,7 +29,7 @@ function gridSizer(e) {
             const gridboxes = document.createElement("div");
             gridboxes.classList.add("gridbox");
             gridboxes.style.width = width + "%";
-            gridboxes.style.paddingBottom= width + "%";
+            gridboxes.style.paddingBottom = width + "%";
             gridcontainer.appendChild(gridboxes);
             }
         }
