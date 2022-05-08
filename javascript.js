@@ -3,7 +3,7 @@ var gridcontainer = document.querySelector(".gridcontainer");
 // display values on slider
 var slider = document.getElementById("range");
 var output = document.querySelector(".value");
-output.innerHTML = slider.value; // Display the default slider value
+output.innerHTML = slider.value + " x " + slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
@@ -32,7 +32,7 @@ function gridSizer(e) {
             gridcontainer.appendChild(gridboxes);
             }
         }
-    gridboxes = document.querySelectorAll(".gridbox"); //select all new initiated gridboxes
+    const gridboxes = document.querySelectorAll(".gridbox"); //select all new initiated gridboxes
     for (const gridbox of gridboxes) {
         let opacityval = 0;
         gridbox.addEventListener("mouseover", function(e){
