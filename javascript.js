@@ -19,6 +19,7 @@ let clearGrid = () => {
 gridSizer(); // runs function once at the start
 slider.addEventListener("input", gridSizer);
 function gridSizer(e) {
+    output.innerHTML = slider.value + " x " + slider.value;
     clearGrid();
     let i,j;
     var rows = slider.value;
@@ -36,6 +37,11 @@ function gridSizer(e) {
     for (const gridbox of gridboxes) {
         let opacityval = 0;
         gridbox.addEventListener("mouseover", function(e){
+            this.classList.add("orange");
+            opacityval += 0.2;
+            this.style.opacity = opacityval;
+        })
+        gridbox.addEventListener("click", function(e){
             this.classList.add("orange");
             opacityval += 0.2;
             this.style.opacity = opacityval;
