@@ -1,0 +1,31 @@
+.gridcontainer {
+    width: 80vw; 
+    height:auto; 
+    max-width: 100%;
+    text-align: center;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.gridbox {
+    border: 1px solid black;
+    position: relative;
+    height: 0;
+    box-sizing: border-box;
+}
+
+.red {
+    background-color: red;
+}
+
+.inputcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.inputbutton {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
